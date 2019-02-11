@@ -29,88 +29,57 @@ hr {
   animation-timing-function: ease-in; 
   background-color: yellow;
 
-}
+  -webkit-animation: raveOn 0.25s;
+  -webkit-animation-iteration-count: 11;
+  -webkit-animation-timing-function: ease-in; 
 
-@keyframes raveOn{
-  0%{
-    background-color: white;
-  }
-  25% {
-    background-color: red;
-  }
-  50% {
-    background-color: green;
-  }
-  75% {
-    background-color: blue;
-  }
-  100%{
-    background-color: yellow;
-  }
+  -moz-animation: raveOn 0.25s;
+  -moz-animation-iteration-count: 11;
+  -moz-animation-timing-function: ease-in; 
 }
-
 
 .strobo-effect {
   animation: shakeIt 150ms;
   animation-iteration-count: 8;
   animation-timing-function: ease-in; 
-}
 
-@keyframes shakeIt {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-}
+  -webkit-animation: shakeIt 150ms;
+  -webkit-animation-iteration-count: 8;
+  -webkit-animation-timing-function: ease-in; 
 
+  -moz-animation: shakeIt 150ms;
+  -moz-animation-iteration-count: 8;
+  -moz-animation-timing-function: ease-in; 
+}
 
 .strobo-container {
   animation: stroboContainer 0.25s;
   animation-timing-function: ease-out; 
   animation-iteration-count: 11;
 
-}
+  -webkit-animation: stroboContainer 0.25s;
+  -webkit-animation-timing-function: ease-out; 
+  -webkit-animation-iteration-count: 11;
 
-@keyframes stroboContainer {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
+  -moz-animation: stroboContainer 0.25s;
+  -moz-animation-timing-function: ease-out; 
+  -moz-animation-iteration-count: 11;
 }
 
 .shrinking {
-  /* color: white; */
   font-size: 0;
   animation: shrinking-font 2s;
   animation-iteration-count: 1;
   animation-timing-function: ease-out;
   line-height: 1;
-}
 
-@keyframes shrinking-font {
-  0% {
-    font-size: 7vw;
-    /* line-height: 1; */
+  -webkit-animation: shrinking-font 2s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-out;
 
-  }
-  25%{
-    line-height: 0.75;
-
-  }
-  50% {
-    /* line-height: 0.75; */
-  }
-  75%{
-    line-height: 1;
-  }
-  100% {
-    font-size: 0;
-
-  }
+  -moz-animation: shrinking-font 2s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: ease-out;
 }
 
 .stretching {
@@ -118,18 +87,111 @@ hr {
   animation: stretching 1.5s;
   animation-iteration-count: 1;
   animation-timing-function: linear;
+
+  -webkit-animation: stretching 1.5s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+
+  -moz-animation: stretching 1.5s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: linear;
+}
+
+@keyframes raveOn{
+  0%{ background-color: white;}
+  25% { background-color: red;}
+  50% {background-color: green;}
+  75% {background-color: blue;}
+  100%{background-color: yellow;}
+}
+
+@keyframes shakeIt {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+@keyframes stroboContainer {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes shrinking-font {
+  0% {font-size: 7vw;}
+  25%{line-height: 0.75;}
+  75%{ line-height: 1;}
+  100% { font-size: 0;}
 }
 
 @keyframes stretching {
-  0% {
-    font-size: 1vw;
-  }
-  50% {
-    font-size: 350vw;
-  }
-  100% {
-    font-size: 700vw;
-  }
-
+  0% { font-size: 1vw; }
+  50% { font-size: 350vw; }
+  100% {font-size: 700vw;}
 }
 
+
+/* Safari 4+ */
+
+@-webkit-keyframes raveOn{
+  0%{ background-color: white;}
+  25% { background-color: red;}
+  50% {background-color: green;}
+  75% {background-color: blue;}
+  100%{background-color: yellow;}
+}
+
+@-webkit-keyframes shakeIt {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+@-webkit-keyframes stroboContainer {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes shrinking-font {
+  0% {font-size: 7vw;}
+  25%{line-height: 0.75;}
+  75%{ line-height: 1;}
+  100% { font-size: 0;}
+}
+
+@-webkit-keyframes stretching {
+  0% { font-size: 1vw; }
+  50% { font-size: 350vw; }
+  100% {font-size: 700vw;}
+}
+
+
+/* Fx 5+ */
+
+@-moz-keyframes raveOn{
+  0%{ background-color: white;}
+  25% { background-color: red;}
+  50% {background-color: green;}
+  75% {background-color: blue;}
+  100%{background-color: yellow;}
+}
+
+@-moz-keyframes shakeIt {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+@-moz-keyframes stroboContainer {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes shrinking-font {
+  0% {font-size: 7vw;}
+  25%{line-height: 0.75;}
+  75%{ line-height: 1;}
+  100% { font-size: 0;}
+}
+
+@-moz-keyframes stretching {
+  0% { font-size: 1vw; }
+  50% { font-size: 350vw; }
+  100% {font-size: 700vw;}
+}
